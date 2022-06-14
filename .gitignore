@@ -33,3 +33,7 @@
 /microservices/pySigmaService//packages/
 /microservices/pySigmaService/riderModule.iml
 /microservices/pySigmaService//_ReSharper.Caches/
+
+/microservices/pySigma/__pycache__
+/microservices/pySigma/.venv
+/microservices/pySigma/.vscode
