@@ -37,3 +37,7 @@
 /microservices/pySigma/__pycache__
 /microservices/pySigma/.venv
 /microservices/pySigma/.vscode
+
+/microservices/sigmacService/__pycache__
+/microservices/sigmacService/.venv
+/microservices/sigmacService/.vscode
