@@ -9,3 +9,9 @@ services:
       context: .
       dockerfile: microservices/pySigmaService/Dockerfile
     network_mode: host
+  sigmacservice:
+    image: sigmac-service
+    build:
+      context: .
+      dockerfile: microservices/sigmacService/Dockerfile
+    network_mode: host
