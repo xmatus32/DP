@@ -22,4 +22,4 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 
-app.Run("http://localhost:8000");
+app.Run();
