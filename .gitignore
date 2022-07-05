@@ -27,12 +27,19 @@
 # /frontend/*.sln
 # /frontend/*.sw?
 
-/microservices/pySigmaService/bin/
-/microservices/pySigmaService/obj/
-/microservices/pySigmaService/.idea/
-/microservices/pySigmaService//packages/
-/microservices/pySigmaService/riderModule.iml
-/microservices/pySigmaService//_ReSharper.Caches/
+/microservices/dummyService/bin/
+/microservices/dummyService/obj/
+/microservices/dummyService/.idea/
+/microservices/dummyService/packages/
+/microservices/dummyService/riderModule.iml
+/microservices/dummyService/_ReSharper.Caches/
+
+/microservices/webApiGateway/bin/
+/microservices/webApiGateway/obj/
+/microservices/webApiGateway/.idea/
+/microservices/webApiGateway/packages/
+/microservices/webApiGateway/riderModule.iml
+/microservices/webApiGateway/_ReSharper.Caches/
 
 /microservices/pySigma/__pycache__
 /microservices/pySigma/.venv

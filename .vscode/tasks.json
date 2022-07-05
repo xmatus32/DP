@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj",
+                "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj",
+                "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj"
+                "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -46,12 +46,12 @@
             "dockerBuild": {
                 "tag": "dp:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/microservices/pySigmaService/Dockerfile",
+                "dockerfile": "${workspaceFolder}/microservices/dummyservice/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj"
+                "appProject": "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj"
             }
         },
         {
@@ -62,12 +62,12 @@
             ],
             "dockerBuild": {
                 "tag": "dp:latest",
-                "dockerfile": "${workspaceFolder}/microservices/pySigmaService/Dockerfile",
+                "dockerfile": "${workspaceFolder}/microservices/dummyservice/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj"
+                "appProject": "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj"
             }
         },
         {
@@ -78,7 +78,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj",
+                "appProject": "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj",
                 "enableDebugging": true
             }
         },
@@ -90,7 +90,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj"
+                "appProject": "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj"
             }
         }
     ]

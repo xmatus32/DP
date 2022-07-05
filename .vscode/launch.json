@@ -6,9 +6,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/microservices/pySigmaService/bin/Debug/net6.0/pySigmaService.dll",
+            "program": "${workspaceFolder}/microservices/dummyservice/bin/Debug/net6.0/dummyservice.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/microservices/pySigmaService",
+            "cwd": "${workspaceFolder}/microservices/dummyservice",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
@@ -32,7 +32,7 @@
             "request": "launch",
             "preLaunchTask": "docker-run: debug",
             "netCore": {
-                "appProject": "${workspaceFolder}/microservices/pySigmaService/pySigmaService.csproj"
+                "appProject": "${workspaceFolder}/microservices/dummyservice/dummyservice.csproj"
             }
         }
     ]

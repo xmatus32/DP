@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace pySigmaService.Controllers;
+namespace dummyService.Controllers;
 
 [ApiController]
-[Route("")]
+[Route("/")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]

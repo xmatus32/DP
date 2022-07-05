@@ -1,4 +1,4 @@
-namespace pySigmaService;
+namespace dummyService;
 
 public class WeatherForecast
 {

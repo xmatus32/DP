@@ -3,14 +3,23 @@
 version: '3.4'
 
 services:
-  pysigmaservice:
-    image: pysigmaservice
+  dummyservice:
+    image: dummyservice
     build:
       context: .
-      dockerfile: microservices/pySigmaService/Dockerfile
+      dockerfile: microservices/dummyService/Dockerfile
     network_mode: host
+  webapigateway:
+    image: webapigateway
+    build:
+      context: .
+      dockerfile: microservices/webApiGateway/Dockerfile
+    network_mode: host
+    depends_on:
+      - dummyservice
+      - sigmacservice
   sigmacservice:
-    image: sigmac-service
+    image: sigmacservice
     build:
       context: .
       dockerfile: microservices/sigmacService/Dockerfile

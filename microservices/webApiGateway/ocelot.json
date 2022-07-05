@@ -1,0 +1,43 @@
+{
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 8000
+          }
+        ],
+        "UpstreamPathTemplate": "/",
+        "UpstreamHttpMethod": ["Get"]
+      },
+      {
+        "DownstreamPathTemplate": "/lists",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5000
+          }
+        ],
+        "UpstreamPathTemplate": "/lists",
+        "UpstreamHttpMethod": ["Get"]
+      },
+      {
+        "DownstreamPathTemplate": "/",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5000
+          }
+        ],
+        "UpstreamPathTemplate": "/",
+        "UpstreamHttpMethod": ["Post"]
+      }
+    ],
+    "GlobalConfiguration": {
+      "BaseUrl": "http://localhost:7000"
+    }
+  }
