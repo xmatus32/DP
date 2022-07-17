@@ -1,18 +1,11 @@
 <template>
-  <hello-world />
+  <v-card class="d-flex flex-row justify-space-around" flat tile>
+    <hello-world :readonly="false" />
+    <hello-world :readonly="true" />
+  </v-card>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
+<script lang="ts" setup>
 // Components
-import HelloWorld from '../components/HelloWorld.vue';
-
-export default defineComponent({
-  name: 'HomeView',
-
-  components: {
-    HelloWorld,
-  },
-});
+import HelloWorld from "../components/HelloWorld.vue";
 </script>
