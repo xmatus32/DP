@@ -1,9 +1,10 @@
 import base64
-from flask import Flask, request
+from flask import Flask, jsonify, request
 import subprocess
 import os
 import subprocess
 import configparser
+import json
 
 
 app = Flask(__name__)
@@ -18,6 +19,38 @@ def get_list():
     target = '--lists'
     sigmac = "python3 sigmac {}".format(target)
     return subprocess.getoutput(sigmac) #sigmac --lists
+
+#todo: prerobit podla https://github.com/SigmaHQ/sigma/blob/b1c1650897c0a1006ac96ee0f5e959346fac1698/tools/sigma/backends/discovery.py#L28
+@app.route("/backends")
+def get_backend():
+    os.chdir( Config.get('Paths', 'Tools'))
+    result = []
+    arr = os.listdir(Config.get('Paths', 'Backends'))
+    arr.sort()
+    for element in arr:
+        if element.find(".py") == -1 or element.find("discovery.py") != -1 or element.find("tools.py") != -1 or element.find("data.py") != -1 or element.find("base.py") != -1:
+            continue
+        else:
+            result.append(element.replace('.py', ' '))
+    return jsonify(result)
+
+@app.route("/configs")
+def get_configs():
+    result = ["elk-defaultindex",
+     "elk-defaultindex-filebeat",
+     "elk-defaultindex-logstash",
+                     "elk-linux",
+                   "elk-windows",
+                "elk-winlogbeat",
+             "elk-winlogbeat-sp",
+                    "powershell",
+                "splunk-windows",
+          "splunk-windows-index",
+                   "splunk-zeek",
+                        "sysmon",
+                 "windows-audit",
+              "windows-services"]
+    return jsonify(result)
 
 @app.route("/", methods=['POST'])
 def convert():
@@ -35,7 +68,7 @@ def convert():
 
 @app.route("/hello")
 def hello():
-    os.chdir( Config.get('Paths', 'Tools'))
+    os.chdir(Config.get('Paths', 'Tools'))
     return os. getcwd() 
 
 if __name__ == "__main__":

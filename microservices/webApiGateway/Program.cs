@@ -14,6 +14,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(policyBuilder =>
+    policyBuilder.AddPolicy("AllowLocalhost", 
+            x=> x.AllowAnyMethod()
+            .AllowAnyHeader()
+            .SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
+            .AllowCredentials()));
+
 builder.Services.AddOcelot(configuration);
 
 var app = builder.Build();
@@ -24,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("AllowLocalhost");
 
 app.UseOcelot().Wait();
 
