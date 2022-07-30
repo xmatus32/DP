@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <v-textarea
-      id="area"
+      id="rule"
       clearable
       rows="12"
       full-width
@@ -10,7 +10,8 @@
       autofocus
       :readonly="readonly"
       clear-icon="mdi-close-circle"
-      v-model="text"
+      :model-value="rule"
+      @update:modelValue="$emit('update:rule', $event)"
     >
     </v-textarea>
   </div>
@@ -20,8 +21,14 @@
 import SigmaService from "../services/SigmaService.js";
 import { ref } from "vue";
 
-defineProps({ readonly: Boolean });
-const text = ref("");
+defineProps({ readonly: Boolean, rule: String });
+defineEmits(["update:rule"]);
+// const text = ref("");
+
+// function handleChange(event) {
+//   // `event` implicitly has `any` type
+//   console.log(event.target.value);
+// }
 
 // function changeColor() {
 //   if (text.value.includes(":")) {

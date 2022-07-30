@@ -4,13 +4,15 @@ import subprocess
 import os
 import subprocess
 import configparser
-import json
+# from flask_cors import CORS, cross_origin
 
 
 app = Flask(__name__)
+# cors = CORS(app)
 Config = configparser.ConfigParser()
 configFilePath = './microservices/sigmacService/config.ini'
 Config.read(configFilePath)
+
 
 @app.route("/lists")
 def get_list():

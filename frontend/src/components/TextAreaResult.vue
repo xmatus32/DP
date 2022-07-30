@@ -10,6 +10,7 @@
       autofocus
       :readonly="readonly"
       clear-icon="mdi-close-circle"
+      :model-value="rule"
     >
     </v-textarea>
   </div>
@@ -19,7 +20,7 @@
 // import SigmaService from "../services/SigmaService.js";
 // import { onMounted, ref } from "vue";
 
-defineProps({ readonly: Boolean });
+defineProps({ readonly: Boolean, rule: String });
 </script>
 
 <style>

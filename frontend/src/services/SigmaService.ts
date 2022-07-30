@@ -1,8 +1,12 @@
 import http from "./AxiosService";
 
 class SigmaService {
-  logout() {
-    return http.post("/api/logout");
+  convert(target: string, config: string, rule: string) {
+    return http.post<string>("/", {
+      target: target,
+      config: config,
+      rule: rule,
+    });
   }
 
   getList() {

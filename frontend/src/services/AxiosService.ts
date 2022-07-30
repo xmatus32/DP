@@ -1,7 +1,8 @@
 import axios from "axios";
+import jsooon from "../../package.json";
 
 const config = {
-  baseURL: "http://192.168.0.108:7000/",
+  baseURL: jsooon.urlProd,
   headers: {
     "Content-type": "application/json",
   },
