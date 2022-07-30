@@ -1,8 +1,8 @@
 import axios from "axios";
-import jsooon from "../../package.json";
+import json from "../../package.json";
 
 const config = {
-  baseURL: jsooon.urlProd,
+  baseURL: json.urlProd,
   headers: {
     "Content-type": "application/json",
   },

@@ -1,8 +1,8 @@
 {
   "name": "frontend",
   "version": "0.0.0",
-  "urlProd": "http://192.168.0.108:7000/",
-  "urlDev": "http://localhost:7000/",
+  "urlDev": "http://192.168.0.108:7000/",
+  "urlProd": "http://localhost:7000/",
   "scripts": {
     "serve": "vite preview --port 8080 --host",
     "build": "vite build",
