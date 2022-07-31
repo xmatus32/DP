@@ -25,6 +25,30 @@
         "UpstreamHttpMethod": ["Get"]
       },
       {
+        "DownstreamPathTemplate": "/backends",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "sigmacservice",
+            "Port": 5000
+          }
+        ],
+        "UpstreamPathTemplate": "/backends",
+        "UpstreamHttpMethod": ["Get"]
+      },
+      {
+        "DownstreamPathTemplate": "/configs",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "sigmacservice",
+            "Port": 5000
+          }
+        ],
+        "UpstreamPathTemplate": "/configs",
+        "UpstreamHttpMethod": ["Get"]
+      },
+      {
         "DownstreamPathTemplate": "/",
         "DownstreamScheme": "http",
         "DownstreamHostAndPorts": [
